@@ -72,3 +72,13 @@ Le projet "Dice" est une application construite avec Spring Boot permettant de s
 - **Base de données** : H2 
 - **Documentation API** : Swagger (bonus)
 - **Simplification de code** : Lombok (bonus)
+
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+# Projet - Lancer de dés
+
+Réalisation de 3 endpoints pour l'API :
+- **`http://localhost:8081/api/rollDice`** : Lancer un seul dé.
+- **`http://localhost:8081/api/rollDice/{number}`** : Lancer un certain number de dés.
+- **`http://localhost:8081/api/diceLogs`** : Retourne tous les enregistrements de lancer de dés (au format JSON).

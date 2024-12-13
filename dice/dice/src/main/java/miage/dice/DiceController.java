@@ -11,20 +11,21 @@ import java.util.List;
 public class DiceController {
 
     @Autowired
-    private DiceRollLogService DiceRollLogService;
+    private DiceRollLogService diceRollLogService;
 
     @GetMapping("/rollDice")
     public List<Integer> rollSingleDice() {
-        return DiceRollLogService.rollDice(1);
+        return diceRollLogService.rollDice(1);
     }
 
     @GetMapping("/rollDice/{count}")
     public List<Integer> rollMultipleDices(@PathVariable int count) {
-        return DiceRollLogService.rollDice(count);
+        return diceRollLogService.rollDice(count);
     }
 
     @GetMapping("/diceLogs")
     public List<DiceRollLog> getDiceRollLogs() {
-        return (List<DiceRollLog>) DiceRollLogService.rollAndLogDice(1);
+        return diceRollLogService.getAllLogs();
     }
 }
+
